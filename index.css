@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #19261e;
+  --secondary-color: #f0f0f0;
+  --third-color: #080001;
+  --neon-color: #89fc00;
+  --primary-font: Verdana, Helvetica;
+  --secondary-font: digital;
+}
+@font-face {
+  src: url("digital-readout.heavy.ttf");
+  font-family: digital;
+}
+
+body {
+  margin: 0;
+  font-family: var(--primary-font);
+}
+
+h3 {
+  font-size: 1.7rem;
+  margin: 0;
+  color: var(--secondary-color);
+  text-shadow: 0 0 5px #080001;
+}
+button {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  transition: all 250ms ease-in-out;
+}
+button:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+.button-container {
+  margin: 1% auto;
+}
+.scoreboard {
+  background-color: var(--primary-color);
+  margin: 3em auto;
+  padding: 2.5rem;
+  width: min(70%, 500px);
+  box-shadow: 5px 5px 5px #080001;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.home-result-container,
+.guest-result-container {
+  margin: 15% auto;
+  background-color: var(--third-color);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-result,
+#guest-result {
+  font-family: var(--secondary-font);
+  font-size: 5rem;
+  color: var(--neon-color);
+  animation: blink 2s infinite alternate;
+  text-shadow: 0 0 5px var(--neon-color);
+}
+#guest-result {
+  animation: blink 3s infinite alternate;
+  animation-delay: 300ms;
+}
+
+@keyframes blink {
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  52% {
+    opacity: 0;
+  }
+  54% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.reset-button {
+  font-family: var(--primary-font);
+  margin-top: 1em;
+  padding: 0.3em 1em;
+}
+
+#countdown-timer {
+  margin: 10% auto;
+  padding: 1% 10%;
+  font-family: var(--secondary-font);
+  font-size: 4em;
+  background-color: var(--third-color);
+  color: var(--neon-color);
+  text-shadow: 0 0 5px var(--neon-color);
+}
